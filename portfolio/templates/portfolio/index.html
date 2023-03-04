@@ -1,0 +1,86 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <p></p>
+    <div class="text-center">
+        <h3 class="heading">WELCOME</h3>
+    </div>
+    <P></P>
+    <div>
+        <p>
+            Adullam Technologies Incorporation is a fast growing company in Africa and we specialize mainly on web design, mobile app design and desktop applications together with graphics
+        </p>
+        <div>
+            <div class="heading">
+            <h4>Our Services Includes</h4>
+            </div>
+            <ul>
+                <li>Website Creation</li>
+                <li>Graphics Design</li>
+                <li>UI/UX Design</li>
+                <li>Mobile App Development</li>
+                <li>Freelancing</li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="heading">
+            <h4 class="text-center">RECENT WORKS</h4>
+            </div>
+            <div class="row">
+            {% for site in sites %}
+                <a href="{% url 'index' %}" style="text-decoration: none;">
+                <div class="col-sm-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{site.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">{{site.description}}</p>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+                </a>
+            {% endfor %}
+           </div>
+          </div>
+        <h4 class="text-center"><a href="{% url 'index' %}">View More</a></h4>
+        <p></p>
+        <p></p><br>
+        <div>
+            <div class="text-center">
+                <p></p>
+                <div class="heading">
+                <a><h4>GRAPHIC WORKS</h4></a>
+                      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                          <img src="{% static 'images/izz.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                       {% for image in images %}
+                        <div class="carousel-item" data-bs-interval="2000">
+                          <img src="{{image.img.url}}" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+            {% endfor %}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
