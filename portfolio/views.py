@@ -12,3 +12,11 @@ def index(request):
         'images':images,
     }
     return render(request, 'portfolio/index.html', context)
+
+
+def about(request):
+    return render(request, 'portfolio/about.html')
+
+
+def contact(request):
+    return render(request, 'portfolio/contact.html')
