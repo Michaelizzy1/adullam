@@ -11,3 +11,7 @@ class Sites(models.Model):
 class Graphic(models.Model):
     img = models.ImageField()
 
+
+class Defaultpic(models.Model):
+    image = models.ImageField()
+

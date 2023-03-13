@@ -5,3 +5,4 @@ from . models import *
 
 admin.site.register(Sites)
 admin.site.register(Graphic)
+admin.site.register(Defaultpic)

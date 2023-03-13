@@ -11,7 +11,9 @@
     <P></P>
     <div>
         <p>
-            Adullam Technologies Incorporation is a fast growing company in Africa and we specialize mainly on web design, mobile app design and desktop applications together with graphics
+                Adullam Technologies Incorporation is a fast growing technology inclined company in Africa that focuses on software engineering and graphics design.
+                The incorporation focuses on delivering excellently to all her costumers with the best possible and affordable price rates as a way of giving to the society
+                and fostering economic and technological development to Africa and the world at large.
         </p>
         <div>
             <div class="heading">
@@ -46,7 +48,7 @@
             {% endfor %}
            </div>
           </div>
-        <h4 class="text-center"><a href="{% url 'index' %}">View More</a></h4>
+        <h4 class="text-center"><a href="{% url 'sites' %}">View More</a></h4>
         <p></p>
         <p></p><br>
         <div>
@@ -54,13 +56,15 @@
                 <p></p>
                 <div class="heading">
                 <a><h4>GRAPHIC WORKS</h4></a>
+                    {% for image in img %}
                       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="2000">
-                          <img src="{% static 'images/izz.jpg' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                          <img src="{{image.image.url}}" class="d-block w-100" alt="...">
                         </div>
+                    {% endfor %}
                        {% for image in images %}
-                        <div class="carousel-item" data-bs-interval="2000">
+                        <div class="carousel-item" data-bs-interval="3000">
                           <img src="{{image.img.url}}" class="d-block w-100" alt="...">
                         </div>
                        {% endfor %}
