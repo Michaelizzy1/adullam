@@ -11,9 +11,7 @@
     <P></P>
     <div>
         <p>
-                Adullam Technologies Incorporation is a fast growing technology inclined company in Africa that focuses on software engineering and graphics design.
-                The incorporation focuses on delivering excellently to all her costumers with the best possible and affordable price rates as a way of giving to the society
-                and fostering economic and technological development to Africa and the world at large.
+            Adullam Technologies Incorporation is a fast growing technology inclined company in Africa that focuses on software engineering and graphics design. The incorporation focuses on delivering excellently to all her costumers with the best possible and affordable price rates as a way of giving to the society and fostering economic and technological development to Africa and the world at large.
         </p>
         <div>
             <div class="heading">
@@ -28,34 +26,14 @@
             </ul>
         </div>
 
-        <div>
-            <div class="heading">
-            <h4 class="text-center">RECENT WORKS</h4>
-            </div>
-            <div class="row">
-            {% for site in sites %}
-                <a href="{% url 'index' %}" style="text-decoration: none;">
-                <div class="col-sm-6">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{site.image.url}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <p class="card-text">{{site.description}}</p>
-                    </div>
-                </div>
-                <p></p>
-            </div>
-                </a>
-            {% endfor %}
-           </div>
           </div>
-        <h4 class="text-center"><a href="{% url 'sites' %}">View More</a></h4>
         <p></p>
         <p></p><br>
         <div>
             <div class="text-center">
                 <p></p>
                 <div class="heading">
-                <a><h4>GRAPHIC WORKS</h4></a>
+                <a><h4>RECENT WORKS</h4></a>
                     {% for image in img %}
                       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
