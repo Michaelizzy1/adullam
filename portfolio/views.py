@@ -17,7 +17,11 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'portfolio/about.html')
+    img = Defaultpic.objects.all()
+    context = {
+        'img':img
+    }
+    return render(request, 'portfolio/about.html', context)
 
 
 def contact(request):

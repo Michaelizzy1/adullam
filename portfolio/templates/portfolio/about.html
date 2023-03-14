@@ -14,7 +14,9 @@
     </p><br>
     <p></p>
     <div class="text-center">
-        <img src="{% static 'images/izz.jpg' %}" alt="Adullam Technologies Incorporation" height="90%" width="90%">
+        {% for image in img %}
+            <img src="{{image.image.url}}" alt="Adullam Technologies Incorporation" height="90%" width="90%">
+        {% endfor %}
     </div>
 </div>
 
